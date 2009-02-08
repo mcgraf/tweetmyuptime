@@ -9,13 +9,13 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("TweetMyUptime")> 
-<Assembly: AssemblyDescription("")> 
+<Assembly: AssemblyDescription("Twitter Client for posting systeminfo to Twitter")> 
 <Assembly: AssemblyCompany("")> 
 <Assembly: AssemblyProduct("TweetMyUptime")> 
 <Assembly: AssemblyCopyright("Copyright ©  2009")> 
 <Assembly: AssemblyTrademark("")> 
 
-<Assembly: ComVisible(False)>
+<Assembly: ComVisible(False)> 
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
 <Assembly: Guid("f14f2dfc-fc66-4846-b571-341db4dfad44")> 

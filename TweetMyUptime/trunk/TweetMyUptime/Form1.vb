@@ -11,10 +11,16 @@ Public Class Form1
                            ByVal e As System.EventArgs) _
             Handles MyBase.Load
 
+        On Error Resume Next
+
         uname = My.Settings.uname
         passwd = My.Settings.passwd
         tweet = New Twitterizer.Framework.Twitter(uname, passwd)
         cmdCopyIP.Enabled = False
+        txtTwitterName.Text = My.Settings.uname
+        txtTwitterPassword.Text = My.Settings.passwd
+
+
     End Sub
 
     Private Sub cmdExit_Click(ByVal sender As System.Object, _
@@ -26,6 +32,7 @@ Public Class Form1
     Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, _
                                        ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) _
             Handles LinkLabel1.LinkClicked
+
         On Error Resume Next
 
         Dim WC As New System.Net.WebClient
@@ -51,4 +58,16 @@ Public Class Form1
         MsgBox(result)
     End Sub
 
+    Private Sub btnSave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSave.Click
+
+        On Error Resume Next
+
+        My.Settings.uname = txtTwitterName.Text
+        My.Settings.passwd = txtTwitterPassword.Text
+        My.Settings.Save()
+        MsgBox(tweet.Status.Show(uname))
+
+
+
+    End Sub
 End Class
