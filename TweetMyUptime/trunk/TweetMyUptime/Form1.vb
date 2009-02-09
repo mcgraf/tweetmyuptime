@@ -20,7 +20,6 @@ Public Class Form1
         txtTwitterName.Text = My.Settings.uname
         txtTwitterPassword.Text = My.Settings.passwd
 
-
     End Sub
 
     Private Sub cmdExit_Click(ByVal sender As System.Object, _

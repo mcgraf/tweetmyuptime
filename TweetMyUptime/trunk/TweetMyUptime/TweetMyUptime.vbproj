@@ -18,7 +18,7 @@
     <OptionStrict>Off</OptionStrict>
     <OptionInfer>On</OptionInfer>
     <ApplicationIcon>Twitter.ico</ApplicationIcon>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
     <ManifestCertificateThumbprint>59129969C46ED277D5577B2A1255C13F64D33ED5</ManifestCertificateThumbprint>
