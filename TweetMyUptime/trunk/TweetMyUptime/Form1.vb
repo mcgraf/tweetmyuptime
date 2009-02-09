@@ -1,4 +1,8 @@
-﻿
+﻿' ********************************************************************************
+'     Document    :  Form1.vb
+'     Description :  [twitter client]
+' ********************************************************************************
+
 Public Class Form1
 
     Dim uname As String
@@ -52,21 +56,35 @@ Public Class Form1
     Private Sub cmdTweet_Click(ByVal sender As System.Object, _
                                ByVal e As System.EventArgs) _
             Handles cmdTweet.Click
-        result = tweet.Status.Update(TextBox1.Text).TwitterUser.UserName
+        tweet.Status.Update(TextBox1.Text)
 
-        MsgBox(result)
+
     End Sub
 
-    Private Sub btnSave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSave.Click
+    Private Sub btnSave_Click(ByVal sender As System.Object, _
+                              ByVal e As System.EventArgs) _
+            Handles btnSave.Click
 
         On Error Resume Next
+        result = Twitterizer.Framework.Twitter.VerifyCredentials(txtTwitterName.Text, txtTwitterPassword.Text)
 
-        My.Settings.uname = txtTwitterName.Text
-        My.Settings.passwd = txtTwitterPassword.Text
-        My.Settings.Save()
-        MsgBox(tweet.Status.Show(uname))
+        If result = True Then
+            MsgBox("You have logged in succesfully", MsgBoxStyle.Information)
+            My.Settings.uname = txtTwitterName.Text
+            My.Settings.passwd = txtTwitterPassword.Text
+            My.Settings.Save()
 
+        Else
+            MsgBox("Invalid username or password!", MsgBoxStyle.Exclamation)
+        End If
 
+    End Sub
+
+    Private Sub btnClear_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnClear.Click
+        txtTwitterName.Clear()
+        txtTwitterPassword.Clear()
+        My.Settings.uname = ""
+        My.Settings.passwd = ""
 
     End Sub
 End Class
