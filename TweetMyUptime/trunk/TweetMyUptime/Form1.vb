@@ -92,6 +92,18 @@ Public Class Form1
 
     Public Sub GetTwitterPosts()
         'code for fetching posts
+        
+        'MsgBox(tweet.Status.Show(1)).ToString()
+        Dim status As New Twitterizer.Framework.TwitterStatus
+        'status.TwitterUser.UserName = "mcgraf"
+        MsgBox(status.ID & status.Source & status.Text)
+
+
+
     End Sub
 
+    Private Sub btnButton1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnButton1.Click
+        GetTwitterPosts()
+
+    End Sub
 End Class

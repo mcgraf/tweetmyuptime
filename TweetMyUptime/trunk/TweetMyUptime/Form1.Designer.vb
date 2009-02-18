@@ -40,6 +40,7 @@ Partial Class Form1
         Me.picPictureBox1 = New System.Windows.Forms.PictureBox
         Me.cmdTweet = New System.Windows.Forms.Button
         Me.lstListBox1 = New System.Windows.Forms.ListBox
+        Me.btnButton1 = New System.Windows.Forms.Button
         Me.Panel1.SuspendLayout()
         Me.grpGroupBox1.SuspendLayout()
         CType(Me.picPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -211,12 +212,22 @@ Partial Class Form1
         Me.lstListBox1.Size = New System.Drawing.Size(348, 108)
         Me.lstListBox1.TabIndex = 12
         '
+        'btnButton1
+        '
+        Me.btnButton1.Location = New System.Drawing.Point(142, 272)
+        Me.btnButton1.Name = "btnButton1"
+        Me.btnButton1.Size = New System.Drawing.Size(75, 23)
+        Me.btnButton1.TabIndex = 13
+        Me.btnButton1.Text = "Button1"
+        Me.btnButton1.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(372, 427)
+        Me.Controls.Add(Me.btnButton1)
         Me.Controls.Add(Me.lstListBox1)
         Me.Controls.Add(Me.picPictureBox1)
         Me.Controls.Add(Me.cmdCopyIP)
@@ -258,5 +269,6 @@ Partial Class Form1
     Friend WithEvents btnSave As System.Windows.Forms.Button
     Friend WithEvents picPictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents lstListBox1 As System.Windows.Forms.ListBox
+    Friend WithEvents btnButton1 As System.Windows.Forms.Button
 
 End Class
