@@ -39,6 +39,7 @@ Partial Class Form1
         Me.lblLabel3 = New System.Windows.Forms.Label
         Me.picPictureBox1 = New System.Windows.Forms.PictureBox
         Me.cmdTweet = New System.Windows.Forms.Button
+        Me.lstListBox1 = New System.Windows.Forms.ListBox
         Me.Panel1.SuspendLayout()
         Me.grpGroupBox1.SuspendLayout()
         CType(Me.picPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -46,7 +47,7 @@ Partial Class Form1
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(12, 218)
+        Me.TextBox1.Location = New System.Drawing.Point(12, 217)
         Me.TextBox1.MaxLength = 140
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
@@ -168,7 +169,7 @@ Partial Class Form1
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(75, 23)
         Me.btnSave.TabIndex = 11
-        Me.btnSave.Text = "Save"
+        Me.btnSave.Text = "Login/save"
         Me.btnSave.UseVisualStyleBackColor = True
         '
         'lblLabel3
@@ -202,12 +203,21 @@ Partial Class Form1
         Me.cmdTweet.Text = "Tweet"
         Me.cmdTweet.UseVisualStyleBackColor = True
         '
+        'lstListBox1
+        '
+        Me.lstListBox1.FormattingEnabled = True
+        Me.lstListBox1.Location = New System.Drawing.Point(12, 310)
+        Me.lstListBox1.Name = "lstListBox1"
+        Me.lstListBox1.Size = New System.Drawing.Size(348, 108)
+        Me.lstListBox1.TabIndex = 12
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(371, 429)
+        Me.ClientSize = New System.Drawing.Size(372, 427)
+        Me.Controls.Add(Me.lstListBox1)
         Me.Controls.Add(Me.picPictureBox1)
         Me.Controls.Add(Me.cmdCopyIP)
         Me.Controls.Add(Me.LinkLabel1)
@@ -247,5 +257,6 @@ Partial Class Form1
     Friend WithEvents btnClear As System.Windows.Forms.Button
     Friend WithEvents btnSave As System.Windows.Forms.Button
     Friend WithEvents picPictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents lstListBox1 As System.Windows.Forms.ListBox
 
 End Class

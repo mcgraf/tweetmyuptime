@@ -87,4 +87,8 @@ Public Class Form1
         My.Settings.passwd = ""
 
     End Sub
+    Public Sub GetTwitterPosts()
+        'code for fetching posts
+    End Sub
+
 End Class
