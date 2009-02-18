@@ -80,13 +80,16 @@ Public Class Form1
 
     End Sub
 
-    Private Sub btnClear_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnClear.Click
+    Private Sub btnClear_Click(ByVal sender As System.Object, _
+                               ByVal e As System.EventArgs) _
+            Handles btnClear.Click
         txtTwitterName.Clear()
         txtTwitterPassword.Clear()
         My.Settings.uname = ""
         My.Settings.passwd = ""
 
     End Sub
+
     Public Sub GetTwitterPosts()
         'code for fetching posts
     End Sub
